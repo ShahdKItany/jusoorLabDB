@@ -79,8 +79,6 @@ router.delete('/:id', async (req, res) => {
     res.status(500).json({ message: 'Error deleting experiment.', error: error.message });
   }
 });
-
-
 router.put('/:id', async (req, res) => {
   try {
     const { nameEn, nameAr, type, materials } = req.body;

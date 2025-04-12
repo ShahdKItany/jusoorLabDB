@@ -80,7 +80,6 @@ router.delete('/:id', async (req, res) => {
   }
 });
 
-
 router.put('/:id', async (req, res) => {
   try {
     const { nameEn, nameAr, type, materials } = req.body;
@@ -127,7 +126,6 @@ router.put('/:id', async (req, res) => {
     res.status(500).json({ message: 'Error updating experiment.', error: error.message });
   }
 });
-
 
 
 export default router;
