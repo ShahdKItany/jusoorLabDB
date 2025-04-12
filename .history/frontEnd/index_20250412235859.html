@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <title>إدارة المختبر</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f4f8;
+      margin: 0;
+      padding: 20px;
+      direction: rtl;
+    }
+    h1, h2 {
+      color: #2c3e50;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+    }
+    form {
+      background-color: #ffffff;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    input, select, button {
+      display: block;
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    button {
+      background-color: #3498db;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #2980b9;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    li {
+      background-color: #ffffff;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>إدارة المختبر</h1>
+
+    <h2>إضافة مادة</h2>
+    <form id="materialForm">
+      <input type="text" id="materialName" placeholder="اسم المادة" required />
+      <input type="number" id="materialCost" placeholder="تكلفة المادة" required />
+      <select id="materialType" required>
+        <option value="">اختر نوع المادة</option>
+        <option value="جهاز">جهاز</option>
+        <option value="أداة">أداة</option>
+        <option value="مادة كيميائية">مادة كيميائية</option>
+        <option value="غذاء">غذاء</option>
+      </select>
+      <button type="submit">إضافة المادة</button>
+    </form>
+
+    <h2>قائمة المواد</h2>
+    <ul id="materialsList"></ul>
+
+    <h2>إضافة تجربة</h2>
+    <form id="experimentForm">
+      <input type="text" id="experimentNameEn" placeholder="اسم التجربة (بالإنجليزية)" required />
+      <input type="text" id="experimentNameAr" placeholder="اسم التجربة (بالعربية)" required />
+      <select id="experimentType" required>
+        <option value="">اختر نوع التجربة</option>
+        <option value="فيزياء">فيزياء</option>
+        <option value="كيمياء">كيمياء</option>
+        <option value="أحياء">أحياء</option>
+        <option value="جيولوجيا">جيولوجيا</option>
+        <option value="علوم">علوم</option>
+      </select>
+      <div id="experimentMaterials">
+        <h3>المواد المستخدمة</h3>
+        <!-- سيتم إضافة حقول المواد هنا ديناميكيًا -->
+      </div>
+      <button type="button" id="addMaterialToExperiment">إضافة مادة للتجربة</button>
+      <button type="submit">إضافة التجربة</button>
+    </form>
+
+    <h2>قائمة التجارب</h2>
+    <ul id="experimentsList"></ul>
+  </div>
+
+  <script>
+    // سيتم إضافة كود JavaScript هنا
+  </script>
+</body>
+</html>

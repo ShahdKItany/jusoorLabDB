@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Lab Management</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Lab Management System</h1>
+
+    <!-- Add Material Section -->
+    <section class="section">
+      <h2>Add Material</h2>
+      <form id="materialForm" class="form">
+        <input type="text" id="materialName" placeholder="Name" required />
+        <input type="number" id="materialCost" placeholder="Cost" required />
+        <input type="text" id="materialType" placeholder="Type (Device/Tool/Chemical/Food)" required />
+        <button type="submit">Add Material</button>
+      </form>
+    </section>
+
+    <!-- Add Experiment Section -->
+    <section class="section">
+      <h2>Add Experiment</h2>
+      <form id="experimentForm" class="form">
+        <input type="text" id="experimentNameEn" placeholder="Name (EN)" required />
+        <input type="text" id="experimentNameAr" placeholder="Name (AR)" required />
+        <input type="text" id="experimentType" placeholder="Type (Physics/Chemistry/...)" required />
+        <textarea id="experimentMaterials" placeholder="Materials JSON (e.g. [{&quot;material&quot;: &quot;id&quot;, &quot;quantityUsed&quot;: 2}])" required></textarea>
+        <button type="submit">Add Experiment</button>
+      </form>
+    </section>
+
+    <!-- Display Materials -->
+    <section class="section">
+      <h2>All Materials</h2>
+      <ul id="materialsList"></ul>
+    </section>
+
+    <!-- Display Experiments -->
+    <section class="section">
+      <h2>All Experiments</h2>
+      <ul id="experimentsList"></ul>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
