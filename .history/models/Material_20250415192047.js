@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 
 const materialSchema = new mongoose.Schema({
-  name: { type: String, required: true, unique: true },
+  name: { type: String, required: true },
   cost: { type: Number, required: true },
   description: String,
   quantity: { type: Number, default: 1 },

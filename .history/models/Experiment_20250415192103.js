@@ -10,7 +10,7 @@ const experimentSchema = new mongoose.Schema({
   },
   nameAr: {
     type: String,
-   // required: true,
+    required: true,
     unique: true
   },
   type: {
